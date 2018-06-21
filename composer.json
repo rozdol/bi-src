@@ -3,12 +3,6 @@
     "description": "Bi source empty template",
     "type": "vanilla-theme",
     "license": "MIT",
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@github.com:rozdol/bi-src.git"
-        }
-    ],
     "extra": {
         "installer-name": "src"
     },
