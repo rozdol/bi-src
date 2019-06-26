@@ -41,8 +41,8 @@ $access_arr=[
     'edit_send_message',
 
 
-    'view_entites',
-    'edit_entites',
+    'view_entities',
+    'edit_entities',
 
     'view_payments',
     'edit_payments',
@@ -138,20 +138,20 @@ $this->data->add_menu('Data', ['Business'=>'#']);
 $this->data->add_menu('Data', ['Info'=>'#']);
 $this->data->add_menu('Tools', ['Search'=>'#']);
 
-$this->data->add_menu('Business', ['entites'=>'?act=show&what=entites']);
+$this->data->add_menu('Business', ['entities'=>'?act=show&what=entities']);
 $this->data->add_menu('Business', ['Projects'=>'?act=show&what=projects']);
 $this->data->add_menu('Business', ['Tasks'=>'?act=show&what=tasks']);
 
 
 $this->data->add_menu('Info', ['Lists'=>'?act=show&what=lists']);
 
-$this->data->add_menu('Search', ['entites'=>'?act=search&what=entites']);
+$this->data->add_menu('Search', ['entities'=>'?act=search&what=entities']);
 $this->data->add_menu('Search', ['Projects'=>'?act=search&what=projects']);
 $this->data->add_menu('Search', ['Tasks'=>'?act=search&what=tasks']);
 
 $this->data->add_menu('Reports', ['Books'=>'?act=report&what=books']);
 
-$this->data->add_menu('New', ['Partner'=>'?act=add&what=entites']);
+$this->data->add_menu('New', ['Partner'=>'?act=add&what=entities']);
 $this->data->add_menu('New', ['Partner Import'=>'?act=add&what=import_partner']);
 $this->data->add_menu('New', ['Projects'=>'?act=add&what=projects']);
 
@@ -205,7 +205,7 @@ if(file_exists($csv_file)){
     $this->html->error("No file $csv_file");
 }
 
-$this->livestatus('Add entites');
+$this->livestatus('Add entities');
 $vals_array[]=[
     'name' => 'Company A',
     'surname' => '',
@@ -272,8 +272,8 @@ $vals_array[]=[
 ];
 
 foreach ($vals_array as $vals) {
-    echo "Insert entites $vals[name]<br>";
-    $id=$this->db->insert_db('entites', $vals);
+    echo "Insert entities $vals[name]<br>";
+    $id=$this->db->insert_db('entities', $vals);
 }
 
 
